@@ -1,0 +1,24 @@
+{
+  "name": "permit-fastify-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node index.js",
+    "dev": "npm run build && npm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "fastify": "^4.15.0",
+    "permitio": "^1.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.5",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.2"
+  }
+}
