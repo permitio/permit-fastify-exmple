@@ -2,7 +2,6 @@ require('dotenv').config();
 
 import Fastify from 'fastify';
 import type { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
-import { withPermitMiddleware } from './plugins/authorize';
 
 // Create server
 const server: FastifyInstance = Fastify({ logger: true });
@@ -16,9 +15,6 @@ const authenticate = async () => ({ hello: 'authenticate' });
 const privateRoutes = async (fastify: FastifyInstance, _opts: any) => {
     // Mock authentication
     fastify.register(authenticate);
-
-    // Add authorization middleware
-    fastify.addHook('preHandler', withPermitMiddleware);
 
     fastify.post('/post', mockPrivate);
     fastify.put('/post', mockPrivate);
