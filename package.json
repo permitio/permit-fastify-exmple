@@ -14,7 +14,7 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "fastify": "^4.15.0",
-    "permitio": "^1.1.5"
+    "permitio": "^2.2.0"
   },
   "devDependencies": {
     "@types/node": "^18.15.5",
